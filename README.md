@@ -1,6 +1,8 @@
 ## How to build the application
 You need to use maven to build the application.
 ```bash
+$git clone https://github.com/mdongel/java-test.git
+$cd java-test
 $mvn -B clean package 
 ```
 
