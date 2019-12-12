@@ -1,3 +1,172 @@
+## How to build the application
+You need to use maven to build the application.
+```bash
+$mvn -B clean package 
+```
+
+## How to run the application
+```bash
+$java -jar target\grocery-app-0.0.1-SNAPSHOT.jar
+```
+## How to use the application
+
+```bash
+$java -jar target\grocery-app-0.0.1-SNAPSHOT.jar
+-------------------------------------------------------
+`one`**`two`**`three`
+- To add new item:   add [productName] [amount]
+-                    Available products are:
+-                    -> add soup 1
+-                    -> add bread 4
+-                    -> add milk 3
+-                    -> add apple 2
+- To get the price the basket   : sub or sub [day]
+     For current day            : sub
+  For s specific day after today: sub  [day]
+- To reset the basket: reset
+- To exit: exit
+-------------------------------------------------------
+cmd>add soup 3
+3 tin of soup successfully added to shopping basket.
+
+cmd>add bread 2
+2 loaf of bread successfully added to shopping basket.
+
+cmd>sub
+---------------------------------------
+Content of Shopping Basket:
+
+3 tin of soup
+2 loaf of bread
+---------------------------------------
+Expected total cost = 3.15
+cmd>reset
+Now shopping basket is clear...
+
+-------------------------------------------------------
+- To add new item:   add [productName] [amount]
+-                    Available products are:
+-                    -> add soup 1
+-                    -> add bread 4
+-                    -> add milk 3
+-                    -> add apple 2
+- To get the price the basket   : sub or sub [day]
+     For current day            : sub
+  For s specific day after today: sub  [day]
+- To reset the basket: reset
+- To exit: exit
+-------------------------------------------------------
+cmd>add apple 6
+6 single of apple successfully added to shopping basket.
+
+cmd>add milk 1
+1 bottle of milk successfully added to shopping basket.
+
+cmd>sub
+---------------------------------------
+Content of Shopping Basket:
+
+6 single of apple
+1 bottle of milk
+---------------------------------------
+Expected total cost = 1.90
+cmd>reset
+Now shopping basket is clear...
+
+-------------------------------------------------------
+- To add new item:   add [productName] [amount]
+-                    Available products are:
+-                    -> add soup 1
+-                    -> add bread 4
+-                    -> add milk 3
+-                    -> add apple 2
+- To get the price the basket   : sub or sub [day]
+     For current day            : sub
+  For s specific day after today: sub  [day]
+- To reset the basket: reset
+- To exit: exit
+-------------------------------------------------------
+cmd>add apple 6
+6 single of apple successfully added to shopping basket.
+
+cmd>add milk 1
+1 bottle of milk successfully added to shopping basket.
+
+cmd>sub
+---------------------------------------
+Content of Shopping Basket:
+
+6 single of apple
+1 bottle of milk
+---------------------------------------
+Expected total cost = 1.90
+cmd>reset
+Now shopping basket is clear...
+
+-------------------------------------------------------
+- To add new item:   add [productName] [amount]
+-                    Available products are:
+-                    -> add soup 1
+-                    -> add bread 4
+-                    -> add milk 3
+-                    -> add apple 2
+- To get the price the basket   : sub or sub [day]
+     For current day            : sub
+  For s specific day after today: sub  [day]
+- To reset the basket: reset
+- To exit: exit
+-------------------------------------------------------
+cmd>add apple 6
+6 single of apple successfully added to shopping basket.
+
+cmd>add milk 1
+1 bottle of milk successfully added to shopping basket.
+
+cmd>sub 5
+---------------------------------------
+Content of Shopping Basket:
+
+6 single of apple
+1 bottle of milk
+---------------------------------------
+Expected total cost = 1.84
+cmd>reset
+Now shopping basket is clear...
+
+-------------------------------------------------------
+- To add new item:   add [productName] [amount]
+-                    Available products are:
+-                    -> add soup 1
+-                    -> add bread 4
+-                    -> add milk 3
+-                    -> add apple 2
+- To get the price the basket   : sub or sub [day]
+     For current day            : sub
+  For s specific day after today: sub  [day]
+- To reset the basket: reset
+- To exit: exit
+-------------------------------------------------------
+cmd>add apple 3
+3 single of apple successfully added to shopping basket.
+
+cmd>add soup 2
+2 tin of soup successfully added to shopping basket.
+
+cmd>add bread 1
+1 loaf of bread successfully added to shopping basket.
+
+cmd>sub 5
+---------------------------------------
+Content of Shopping Basket:
+
+3 single of apple
+2 tin of soup
+1 loaf of bread
+---------------------------------------
+Expected total cost = 1.97
+cmd>
+```
+
 # Java Exercise
 
 This is a simple exercise to allow you to demostrate your software engineering skillset. It's completly up to you how long you give yourself, stop when you're happy with the quality of your work, but we don't expect it to take too long.
@@ -22,7 +191,7 @@ Henry’s Grocery, currently only stocks four items and has two promotions. Thes
 
 ### Stock Items
         
-|  **product** | **unit**   | **cost** |
+|  product | unit   | cost |
 | :---  | :---: | :---: |
 |  soup    | tin    | 0.65 |
 |  bread   | loaf   | 0.80 |
@@ -31,7 +200,7 @@ Henry’s Grocery, currently only stocks four items and has two promotions. Thes
 
 ### Discounts
  
-| **the offer**| **valid from** | **valid to** | 
+| the offer| valid from | valid to | 
 | :---     | :---: | :---: |    
 | Buy 2 tins of soup and get a loaf of bread half price | yesterday | for 7 days |
 | Apples have a 10% discount | from 3 days hence | until the end of the following month |
