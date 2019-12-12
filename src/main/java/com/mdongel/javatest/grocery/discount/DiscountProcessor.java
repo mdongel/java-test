@@ -1,4 +1,4 @@
-package com.mdongel.javatest.grocery.discountprocessor;
+package com.mdongel.javatest.grocery.discount;
 
 import com.mdongel.javatest.grocery.model.Item;
 

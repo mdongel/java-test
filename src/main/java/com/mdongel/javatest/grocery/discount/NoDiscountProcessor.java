@@ -1,21 +1,21 @@
-package com.mdongel.javatest.grocery.discountprocessor;
+package com.mdongel.javatest.grocery.discount;
 
 import com.mdongel.javatest.grocery.model.Item;
 
 import java.time.LocalDate;
 import java.util.HashMap;
 
-public class DefaultDiscountProcessor extends DiscountProcessor {
+public class NoDiscountProcessor extends DiscountProcessor {
 
-    public DefaultDiscountProcessor() {
+    public NoDiscountProcessor() {
         this(1);
     }
 
-    public DefaultDiscountProcessor(double rate) {
+    public NoDiscountProcessor(double rate) {
         super(rate);
     }
 
-    public DefaultDiscountProcessor(LocalDate startDate, LocalDate endDate, double rate) {
+    public NoDiscountProcessor(LocalDate startDate, LocalDate endDate, double rate) {
         super(startDate, endDate, rate);
     }
 

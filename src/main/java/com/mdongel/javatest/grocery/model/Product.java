@@ -1,6 +1,6 @@
 package com.mdongel.javatest.grocery.model;
 
-import com.mdongel.javatest.grocery.discountprocessor.DiscountProcessor;
+import com.mdongel.javatest.grocery.discount.DiscountProcessor;
 
 public class Product {
     public enum Unit {
