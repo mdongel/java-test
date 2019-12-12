@@ -34,23 +34,21 @@ public class ShoppingServiceTest {
     }
 
     @Test
-    public void shouldAddProductToShoppingBasketAndCalculateBasket1() {
+    public void shouldPriceBasketWithItems3TinsOfSoapAnd2LoavesOfBreadBoughtToday() {
+        // Given
         ShoppingService shoppingService = new ShoppingService();
 
+        // Then
         shoppingService.addItem("soup", 3);
         shoppingService.addItem("bread", 2);
 
-
-
+        // Expected
         assertEquals(3.15,shoppingService.performSubTotal(LocalDate.now()),1e-15);
-
-
-
 
     }
 
     @Test
-    public void shouldAddProductToShoppingBasketAndCalculateBasket2() {
+    public void shouldPriceBasketWithItems6ApplesAnd1BottleOfMilkBoughtToday() {
         ShoppingService shoppingService = new ShoppingService();
 
         shoppingService.addItem("apple", 6);
@@ -61,7 +59,7 @@ public class ShoppingServiceTest {
     }
 
     @Test
-    public void shouldAddProductToShoppingBasketAndCalculateBasket3() {
+    public void shouldPriceBasketWithItems6ApplesAnd1BottleOfMilkBoughtIn5DaysTime() {
         ShoppingService shoppingService = new ShoppingService();
 
         shoppingService.addItem("apple", 6);
@@ -72,7 +70,7 @@ public class ShoppingServiceTest {
     }
 
     @Test
-    public void shouldAddProductToShoppingBasketAndCalculateBasket4() {
+    public void shouldPriceBasketWithItems3Apples2TinsOfSoupAndALoafOfBreadBoughtIn5DaysTime() {
         ShoppingService shoppingService = new ShoppingService();
 
         shoppingService.addItem("apple", 3);
