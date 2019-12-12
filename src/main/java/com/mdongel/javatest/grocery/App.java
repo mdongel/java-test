@@ -25,19 +25,19 @@ public class App {
         String command = "";
         displayMenu();
         while (!command.equals("exit")) {
-
+            System.out.print("cmd>");
             command = br.readLine();
 
             if (command.equals("reset")) {
                 shoppingBasket.reset();
-                System.out.println("Now shopping basket is clear...");
+                System.out.println("Now shopping basket is clear...\n");
                 displayMenu();
             } else if (command.startsWith("add")) {
                 if (!addOperation(command)) displayMenu();
             } else if (command.startsWith("sub")) {
                 if (!subOperation(command)) displayMenu();
             } else {
-                System.out.println("Usupported Command!");
+                System.out.println("Unsupported Command!\n");
                 displayMenu();
             }
 
@@ -58,7 +58,7 @@ public class App {
                 Integer.parseInt(cmdItems[1]);
             } catch (NumberFormatException e) {
                 System.out.println("Day must be numeric!");
-                System.out.println("It must be like: sub 5");
+                System.out.println("It must be like: sub 5\n");
                 return false;
             }
             sub = shoppingBasket.performSubTotal(LocalDate.now().plusDays(Integer.parseInt(cmdItems[1])));
@@ -75,13 +75,13 @@ public class App {
 
         if (cmdItems.length != 3) {
             System.out.println("Invalid usage of add command!");
-            System.out.println("It must be like: add soup 3");
+            System.out.println("It must be like: add soup 3\n");
             return false;
         }
 
         if (!cmdItems[0].trim().equals("add")) {
             System.out.println("Invalid usage of add command!");
-            System.out.println("It must be like: add soup 3");
+            System.out.println("It must be like: add soup 3\n");
             return false;
         }
 
@@ -89,7 +89,7 @@ public class App {
             Integer.parseInt(cmdItems[2]);
         } catch (NumberFormatException e) {
             System.out.println("Amount must be numeric!");
-            System.out.println("It must be like: add soup 3");
+            System.out.println("It must be like: add soup 3\n");
             return false;
         }
 
@@ -99,12 +99,13 @@ public class App {
             System.out.println("Unsupported product entered!");
             System.out.println("Supported products are:");
             shoppingBasket.getProducts().forEach((k, v) -> System.out.println("- " + k));
+            System.out.println("");
             return false;
         } catch (NumberFormatException e) {
             e.printStackTrace();
         }
         Product product = shoppingBasket.getProducts().get(cmdItems[1]);
-        System.out.println(cmdItems[2] + " " + product.getUnit() + " of " + cmdItems[1] + " successfully added to shopping basket.");
+        System.out.println(cmdItems[2] + " " + product.getUnit() + " of " + cmdItems[1] + " successfully added to shopping basket.\n");
         return true;
 
 
