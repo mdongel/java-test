@@ -1,5 +1,7 @@
 package com.mdongel.javatest.grocery.model;
 
+import com.mdongel.javatest.grocery.discountprocessor.DiscountProcessor;
+
 public class Product {
     public enum Unit {
         tin, loaf, bottle, single
@@ -8,11 +10,13 @@ public class Product {
     private String name;
     private Unit unit;
     private double cost;
+    private DiscountProcessor discountProcessor;
 
-    public Product(String name, Unit unit, double cost) {
+    public Product(String name, Unit unit, double cost, DiscountProcessor discountProcessor) {
         this.name = name;
         this.unit = unit;
         this.cost = cost;
+        this.discountProcessor = discountProcessor;
     }
 
     public String getName() {
@@ -37,5 +41,13 @@ public class Product {
 
     public void setCost(double cost) {
         this.cost = cost;
+    }
+
+    public DiscountProcessor getDiscountProcessor() {
+        return discountProcessor;
+    }
+
+    public void setDiscountProcessor(DiscountProcessor discountProcessor) {
+        this.discountProcessor = discountProcessor;
     }
 }
